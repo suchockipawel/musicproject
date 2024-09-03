@@ -1,0 +1,198 @@
+[
+    {
+        "model": "music.album",
+        "pk": 1,
+        "fields": {
+            "title": "Abbey Road",
+            "artist": "The Beatles",
+            "release_date": "1969-09-26",
+            "genre": "Rock",
+            "description": "Abbey Road is the eleventh studio album by the English rock band the Beatles.",
+            "cover_image": "album_covers/abbey_road.jpg"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 1,
+        "fields": {
+            "album": 1,
+            "title": "Come Together",
+            "duration": "0:59:00"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 2,
+        "fields": {
+            "album": 1,
+            "title": "Something",
+            "duration": "0:03:03"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 3,
+        "fields": {
+            "album": 1,
+            "title": "Here Comes the Sun",
+            "duration": "0:03:05"
+        }
+    },
+    {
+        "model": "music.album",
+        "pk": 2,
+        "fields": {
+            "title": "Thriller",
+            "artist": "Michael Jackson",
+            "release_date": "1982-11-30",
+            "genre": "Pop",
+            "description": "Thriller is the sixth studio album by American singer Michael Jackson.",
+            "cover_image": "album_covers/thriller.jpg"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 4,
+        "fields": {
+            "album": 2,
+            "title": "Wanna Be Startin' Somethin'",
+            "duration": "0:06:03"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 5,
+        "fields": {
+            "album": 2,
+            "title": "Billie Jean",
+            "duration": "0:04:54"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 6,
+        "fields": {
+            "album": 2,
+            "title": "Thriller",
+            "duration": "0:05:57"
+        }
+    },
+    {
+        "model": "music.album",
+        "pk": 3,
+        "fields": {
+            "title": "Back in Black",
+            "artist": "AC/DC",
+            "release_date": "1980-07-25",
+            "genre": "Hard Rock",
+            "description": "Back in Black is the seventh studio album by Australian rock band AC/DC.",
+            "cover_image": "album_covers/back_in_black.jpg"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 7,
+        "fields": {
+            "album": 3,
+            "title": "Hells Bells",
+            "duration": "0:05:09"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 8,
+        "fields": {
+            "album": 3,
+            "title": "Shoot to Thrill",
+            "duration": "0:05:17"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 9,
+        "fields": {
+            "album": 3,
+            "title": "Back in Black",
+            "duration": "0:04:14"
+        }
+    },
+    {
+        "model": "music.album",
+        "pk": 4,
+        "fields": {
+            "title": "Hotel California",
+            "artist": "Eagles",
+            "release_date": "1976-12-08",
+            "genre": "Rock",
+            "description": "Hotel California is the fifth studio album by American rock band Eagles.",
+            "cover_image": "album_covers/hotel_california.jpg"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 10,
+        "fields": {
+            "album": 4,
+            "title": "Hotel California",
+            "duration": "0:06:30"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 11,
+        "fields": {
+            "album": 4,
+            "title": "New Kid in Town",
+            "duration": "0:03:50"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 12,
+        "fields": {
+            "album": 4,
+            "title": "Life in the Fast Lane",
+            "duration": "0:04:46"
+        }
+    },
+    {
+        "model": "music.album",
+        "pk": 5,
+        "fields": {
+            "title": "Dark Side of the Moon",
+            "artist": "Pink Floyd",
+            "release_date": "1973-03-01",
+            "genre": "Progressive Rock",
+            "description": "The Dark Side of the Moon is the eighth studio album by English rock band Pink Floyd.",
+            "cover_image": "album_covers/dark_side_of_the_moon.jpg"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 13,
+        "fields": {
+            "album": 5,
+            "title": "Speak to Me",
+            "duration": "0:01:30"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 14,
+        "fields": {
+            "album": 5,
+            "title": "Breathe",
+            "duration": "0:02:49"
+        }
+    },
+    {
+        "model": "music.song",
+        "pk": 15,
+        "fields": {
+            "album": 5,
+            "title": "Time",
+            "duration": "0:06:53"
+        }
+    }
+]
+

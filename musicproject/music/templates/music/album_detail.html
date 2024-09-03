@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ album.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 2em;
+        }
+        img {
+            border-radius: 8px;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        p {
+            margin: 5px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ album.title }}</h1>
+        <img src="{{ album.cover_image.url }}" alt="{{ album.title }}" width="300" height="300">
+        <p>Artist: {{ album.artist }}</p>
+        <p>Release Date: {{ album.release_date }}</p>
+        <p>Genre: {{ album.genre }}</p>
+        <p>{{ album.description }}</p>
+
+        <h2>Songs</h2>
+        <ul>
+            {% for song in album.songs.all %}
+                <li>{{ song.title }} ({{ song.duration }})</li>
+            {% empty %}
+                <li>No songs available.</li>
+            {% endfor %}
+        </ul>
+
+        <a href="{% url 'album_list' %}">Back to Albums</a>
+    </div>
+</body>
+</html>
+
+
+

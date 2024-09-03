@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 2em;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        form input, form select {
+            margin-right: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        form button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        li img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        li h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        li p {
+            margin: 5px 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Albums</h1>
+
+        <form method="GET" action="{% url 'album_list' %}">
+            <input type="text" name="q" placeholder="Search by title" value="{{ query }}">
+            <input type="text" name="artist" placeholder="Search by artist" value="{{ artist }}">
+            <input type="text" name="genre" placeholder="Search by genre" value="{{ genre }}">
+            <button type="submit">Filter</button>
+        </form>
+
+        <ul>
+            {% for album in albums %}
+                <li>
+                    <a href="{% url 'album_detail' album.pk %}">
+                        <img src="{{ album.cover_image.url }}" alt="{{ album.title }}">
+                        <div>
+                            <h2>{{ album.title }}</h2>
+                            <p>by {{ album.artist }}</p>
+                            <p>Genre: {{ album.genre }}</p>
+                            <p>Released: {{ album.release_date }}</p>
+                        </div>
+                    </a>
+                </li>
+            {% empty %}
+                <li>No albums found.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
